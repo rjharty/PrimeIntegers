@@ -5,6 +5,14 @@ class PrintPrimeTest < ActiveSupport::TestCase
   #   assert true
   # end
  
+    def setup
+        printPrime = PrintPrime.new
+    end
+    
+    def teardown
+        printPrime = nil
+    end
+    
     test "should construct an array of [1,2,3,5] when given 5" do
         printPrime = PrintPrime.new
         array = printPrime.constructArray 5
