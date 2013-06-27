@@ -1,0 +1,21 @@
+<h1>Listing print_primes</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @print_primes.each do |print_prime| %>
+  <tr>
+    <td><%= link_to 'Show', print_prime %></td>
+    <td><%= link_to 'Edit', edit_print_prime_path(print_prime) %></td>
+    <td><%= link_to 'Destroy', print_prime, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Print prime', new_print_prime_path %>
